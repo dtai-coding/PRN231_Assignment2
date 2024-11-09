@@ -1,0 +1,6 @@
+@PRN231PE_FA23_665511_taipdse172357_API_Odata_HostAddress = http://localhost:5035
+
+GET {{PRN231PE_FA23_665511_taipdse172357_API_Odata_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

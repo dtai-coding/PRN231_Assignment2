@@ -1,0 +1,76 @@
+﻿@page
+@model PRN231PE_FA23_665511_taipdse172357_Pages.Pages.SilverJewelryPages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SilverJewelry</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Jewelry.SilverJewelryId" class="control-label"></label>
+                <input asp-for="Jewelry.SilverJewelryId" class="form-control" />
+                <span asp-validation-for="Jewelry.SilverJewelryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jewelry.SilverJewelryName" class="control-label"></label>
+                <input asp-for="Jewelry.SilverJewelryName" class="form-control" />
+                <span asp-validation-for="Jewelry.SilverJewelryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jewelry.SilverJewelryDescription" class="control-label"></label>
+                <input asp-for="Jewelry.SilverJewelryDescription" class="form-control" />
+                <span asp-validation-for="Jewelry.SilverJewelryDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jewelry.MetalWeight" class="control-label"></label>
+                <input asp-for="Jewelry.MetalWeight" class="form-control" />
+                <span asp-validation-for="Jewelry.MetalWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jewelry.Price" class="control-label"></label>
+                <input asp-for="Jewelry.Price" class="form-control" />
+                <span asp-validation-for="Jewelry.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jewelry.ProductionYear" class="control-label"></label>
+                <input asp-for="Jewelry.ProductionYear" class="form-control" />
+                <span asp-validation-for="Jewelry.ProductionYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jewelry.CreatedDate" class="control-label"></label>
+                <input asp-for="Jewelry.CreatedDate" class="form-control" />
+                <span asp-validation-for="Jewelry.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jewelry.CategoryId" class="control-label"></label>
+                <select asp-for="Jewelry.CategoryId" class="form-control">
+                    @foreach (var Category in Model.Categories)
+                    {
+                            <option value="@Category.CategoryId">@Category.CategoryName</option>
+                    })
+                </select>
+                <span asp-validation-for="Jewelry.CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

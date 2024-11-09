@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PRN231PE_FA23_665511_taipdse172357.Pages
+namespace PRN231PE_FA23_665511_taipdse172357_Pages.Pages
 {
     public class PrivacyModel : PageModel
     {
